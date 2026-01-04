@@ -1,0 +1,51 @@
+{
+    "version": "3",
+    "templates": [
+        {
+            "id": 1,
+            "type": 3,
+            "title": "Laravel",
+            "description": "Default laravel project.",
+            "categories": ["Web Development", "Backend Web"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/laravel-clean-install/logo.png",
+            "repository": {
+                "url": "https://github.com/FarcasAdrian/portainer",
+                "stackfile": "docker-environments/laravel-clean-install/docker-compose.yml"
+            },
+            "env": [
+                { "name": "PORTAINER_DB_ROOT_PASSWORD", "label": "Database root password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_DATABASE", "label": "Database name", "value": "laravel", "default": "laravel" },
+                { "name": "PORTAINER_DB_USERNAME", "label": "Database username", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PASSWORD", "label": "Database password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PORT", "label": "Database port", "value": "3306", "default": "3306" },
+                { "name": "PORTAINER_LARAVEL_PORT", "label": "Laravel port", "value": "8080", "default": "8080" },
+                { "name": "PORTAINER_LARAVEL_URI", "label": "Laravel URI", "value": "http://localhost", "default": "http://localhost" }
+            ]
+        },
+        {
+            "id": 2,
+            "type": 3,
+            "title": "Shopware",
+            "description": "Default shopware project.",
+            "categories": ["Web Development", "E-commerce"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/shopware-clean-install/logo.png",
+            "repository": {
+                "url": "https://github.com/FarcasAdrian/portainer",
+                "stackfile": "docker-environments/shopware-clean-install/docker-compose.yml"
+            },
+            "env": [
+                { "name": "PORTAINER_DB_ROOT_PASSWORD", "label": "Database root password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_DATABASE", "label": "Database name", "value": "shopware", "default": "shopware" },
+                { "name": "PORTAINER_DB_USERNAME", "label": "Database username", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PASSWORD", "label": "Database password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PORT", "label": "Database port", "value": "3306", "default": "3306" },
+                { "name": "PORTAINER_SHOPWARE_PORT", "label": "Shopware port", "value": "8001", "default": "8001" },
+                { "name": "PORTAINER_APP_URL", "label": "APP URL", "value": "http://localhost:8001", "default": "http://localhost:8001" },
+                { "name": "PORTAINER_XDEBUG_ENABLE", "label": "XDebug Enabled", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
+                { "name": "PORTAINER_XDEBUG_CLIENT_PORT", "label": "XDebug client port", "value": "9003", "default": "9003" }
+            ]
+        }
+    ]
+}

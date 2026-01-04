@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  laravel_db:
+    image: mysql:8.0
+    container_name: laravel_db
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    env_file:
+      - .env
+    ports:
+      - ${PORTAINER_DB_PORT}:${PORTAINER_DB_PORT}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    build: .
+    container_name: laravel_web
+    env_file:
+      - .env
+    ports:
+      - ${PORTAINER_LARAVEL_PORT}:${PORTAINER_LARAVEL_PORT}
+    depends_on:
+      - laravel_db
+
+volumes:
+  db_data:

@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  shopware_db:
+    image: mysql:8.0
+    container_name: shopware_db
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    env_file:
+      - .env
+    ports:
+      - ${PORTAINER_DB_PORT}:${PORTAINER_DB_PORT}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  shopware:
+    image: dockware/dev:6.6.10.2
+    container_name: shopware
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - ${PORTAINER_SHOPWARE_PORT}:80
+    depends_on:
+      - shopware_db
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  db_data:
