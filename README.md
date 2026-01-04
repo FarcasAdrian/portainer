@@ -14,7 +14,7 @@ This repository provides a ready-to-run Portainer compose file plus a few exampl
 
 - Docker Engine installed (Linux recommended; Windows and macOS are supported).
 - Docker Compose v2 (use the `docker compose` command) or the legacy `docker-compose` binary.
-- Tested with Docker Compose version 29.1.3 — this is the minimum tested version; other versions may work but are untested.
+- Tested with Docker Engine 29.1.3 and Docker Compose 5.0.0 — this is the minimum tested version; other versions may work but are untested.
 
 ## Quickstart
 
