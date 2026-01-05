@@ -27,11 +27,12 @@ services:
       - prestashop_network
     depends_on:
       - prestashop_db
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    volumes:
+      - prestashop_data:/var/www/html
 
 volumes:
   db_data:
+  prestashop_data:
 
 networks:
     prestashop_network:
