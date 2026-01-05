@@ -9,7 +9,7 @@ services:
     env_file:
       - .env
     ports:
-      - ${PORTAINER_DB_PORT}:${PORTAINER_DB_PORT}
+      - ${PORTAINER_DB_PORT}:3306
     networks:
       - prestashop_network
     volumes:
