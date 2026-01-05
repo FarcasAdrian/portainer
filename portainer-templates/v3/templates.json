@@ -5,7 +5,7 @@
             "id": 1,
             "type": 3,
             "title": "Laravel",
-            "description": "Default laravel project.",
+            "description": "Default Laravel project.",
             "categories": ["Web Development", "Backend Web"],
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/laravel-clean-install/logo.png",
@@ -27,7 +27,7 @@
             "id": 2,
             "type": 3,
             "title": "Shopware",
-            "description": "Default shopware project.",
+            "description": "Default Shopware project.",
             "categories": ["Web Development", "E-commerce"],
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/shopware-clean-install/logo.png",
@@ -45,6 +45,38 @@
                 { "name": "PORTAINER_APP_URL", "label": "APP URL", "value": "http://localhost:8001", "default": "http://localhost:8001" },
                 { "name": "PORTAINER_XDEBUG_ENABLE", "label": "XDebug Enabled", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
                 { "name": "PORTAINER_XDEBUG_CLIENT_PORT", "label": "XDebug client port", "value": "9003", "default": "9003" }
+            ]
+        },
+        {
+            "id": 3,
+            "type": 3,
+            "title": "PrestaShop",
+            "description": "Default PrestaShop project.",
+            "categories": ["Web Development", "E-commerce"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/prestashop-clean-install/logo.png",
+            "repository": {
+                "url": "https://github.com/FarcasAdrian/portainer",
+                "stackfile": "docker-environments/prestashop-clean-install/docker-compose.yml"
+            },
+            "env": [
+                { "name": "PORTAINER_DB_ROOT_PASSWORD", "label": "Database root password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_DATABASE", "label": "Database name", "value": "prestashop", "default": "prestashop" },
+                { "name": "PORTAINER_DB_USERNAME", "label": "Database username", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PASSWORD", "label": "Database password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PORT", "label": "Database port", "value": "3306", "default": "3306" },
+                { "name": "PORTAINER_PRESTASHOP_PORT", "label": "PrestaShop port", "value": "8082", "default": "8082" },
+                { "name": "PORTAINER_DB_PREFIX", "label": "Database prefix", "value": "ps_", "default": "ps_" },
+                { "name": "PORTAINER_PRESTASHOP_DEV_MODE", "label": "PrestaShop DEV mode", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
+                { "name": "PORTAINER_PRESTASHOP_DEMO_MODE", "label": "PrestaShop demo mode", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "N", "default": "N" },
+                { "name": "PORTAINER_PRESTASHOP_INSTALL_AUTO", "label": "Auto install PrestaShop", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
+                { "name": "PORTAINER_PRESTASHOP_DOMAIN", "label": "PrestaShop domain", "value": "localhost:8082", "default": "localhost:8082" },
+                { "name": "PORTAINER_PRESTASHOP_LANGUAGE", "label": "PrestaShop default language", "value": "en", "default": "en" },
+                { "name": "PORTAINER_PRESTASHOP_ADMIN_FOLDER_NAME", "label": "PrestaShop admin folder name", "value": "Xadmin", "default": "Xadmin" },
+                { "name": "PORTAINER_PRESTASHOP_INSTALL_FOLDER_NAME", "label": "PrestaShop install folder name", "value": "Xinstall", "default": "Xinstall" },
+                { "name": "PORTAINER_PRESTASHOP_ENABLE_SSL", "label": "PrestaShop enable SSL", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "N", "default": "N" },
+                { "name": "PORTAINER_PRESTASHOP_ADMIN_MAIL", "label": "PrestaShop admin mail", "value": "portainer@default.local", "default": "portainer@default.local" },
+                { "name": "PORTAINER_PRESTASHOP_ADMIN_PASSWORD", "label": "PrestaShop admin password", "value": "admin", "default": "admin" }
             ]
         }
     ]
