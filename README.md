@@ -6,7 +6,8 @@ This repository provides a ready-to-run Portainer compose file plus a few exampl
 
 ## Contents
 
-- `portainer-compose.yaml` — Docker Compose file to start Portainer.
+- `portainer-compose-be.yaml` — Docker Compose file to start Portainer Business Edition.
+- `portainer-compose-ce.yaml` — Docker Compose file to start Portainer Community Edition.
 - `docker-environments/` — example stacks you can run locally (e.g. Laravel, Shopware).
 - `portainer-templates/v3/templates.json` — App templates you can import into Portainer.
 
@@ -18,31 +19,49 @@ This repository provides a ready-to-run Portainer compose file plus a few exampl
 
 ## Quickstart
 
-Start Portainer using the included compose file:
+Start Portainer Business Edition using the included compose file:
 
 ```bash
-docker compose -f portainer-compose.yaml up -d
+docker compose -f portainer-compose-be.yaml up -d
+```
+
+Start Portainer Community Edition using the included compose file:
+
+```bash
+docker compose -f portainer-compose-ce.yaml up -d
 ```
 
 After the stack starts, open the Portainer UI in your browser (Default URL: https://localhost:9443) and complete the initial setup.
 
 ## Stopping & Persistence
 
-Stopping and removing
+Stopping and removing Portainer Business Edition
 ```bash
-docker compose -f portainer-compose.yaml down
+docker compose -f portainer-compose-be.yaml down
 # remove volumes (DATA LOSS)
-docker compose -f portainer-compose.yaml down -v
+docker compose -f portainer-compose-be.yaml down -v
+```
+
+Stopping and removing Portainer Community Edition
+```bash
+docker compose -f portainer-compose-ce.yaml down
+# remove volumes (DATA LOSS)
+docker compose -f portainer-compose-ce.yaml down -v
 ```
 
 Persistence
-- Portainer stores data in the volume defined in [portainer-compose.yaml](portainer-compose.yaml). Back up that volume before removing it.
+- Portainer stores data in the volume defined in [portainer-compose-be.yaml](portainer-compose-be.yaml) and [portainer-compose-ce.yaml](portainer-compose-ce.yaml). Back up that volume before removing it.
 
 ## Troubleshooting
 
-View logs:
+View logs for Portainer Business Edition:
 ```bash
-docker compose -f portainer-compose.yaml logs -f
+docker compose -f portainer-compose-be.yaml logs -f
+```
+
+View logs for Portainer Community Edition:
+```bash
+docker compose -f portainer-compose-ce.yaml logs -f
 ```
 
 ## Using the example environments
