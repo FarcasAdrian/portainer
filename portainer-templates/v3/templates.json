@@ -67,14 +67,14 @@
                 { "name": "PORTAINER_DB_PORT", "label": "Database port", "value": "3308", "default": "3308" },
                 { "name": "PORTAINER_PRESTASHOP_PORT", "label": "PrestaShop port", "value": "8082", "default": "8082" },
                 { "name": "PORTAINER_DB_PREFIX", "label": "Database prefix", "value": "ps_", "default": "ps_" },
-                { "name": "PORTAINER_PRESTASHOP_DEV_MODE", "label": "PrestaShop DEV mode", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
-                { "name": "PORTAINER_PRESTASHOP_DEMO_MODE", "label": "PrestaShop demo mode", "type": "select", "select": [{ "text": "No", "value": "N" }, { "text": "Yes", "value": "Y" }], "value": "N", "default": "N" },
-                { "name": "PORTAINER_PRESTASHOP_INSTALL_AUTO", "label": "Auto install PrestaShop", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
+                { "name": "PORTAINER_PRESTASHOP_DEV_MODE", "label": "PrestaShop DEV mode", "type": "select", "select": [{ "text": "Yes", "value": "1" }, { "text": "No", "value": "0" }], "value": "1", "default": "1" },
+                { "name": "PORTAINER_PRESTASHOP_DEMO_MODE", "label": "PrestaShop demo mode", "type": "select", "select": [{ "text": "No", "value": "0" }, { "text": "Yes", "value": "1" }], "value": "0", "default": "0" },
+                { "name": "PORTAINER_PRESTASHOP_INSTALL_AUTO", "label": "Auto install PrestaShop", "type": "select", "select": [{ "text": "Yes", "value": "1" }, { "text": "No", "value": "0" }], "value": "1", "default": "1" },
                 { "name": "PORTAINER_PRESTASHOP_DOMAIN", "label": "PrestaShop domain", "value": "localhost:8082", "default": "localhost:8082" },
                 { "name": "PORTAINER_PRESTASHOP_LANGUAGE", "label": "PrestaShop default language", "value": "en", "default": "en" },
                 { "name": "PORTAINER_PRESTASHOP_ADMIN_FOLDER_NAME", "label": "PrestaShop admin folder name", "value": "Xadmin", "default": "Xadmin" },
                 { "name": "PORTAINER_PRESTASHOP_INSTALL_FOLDER_NAME", "label": "PrestaShop install folder name", "value": "Xinstall", "default": "Xinstall" },
-                { "name": "PORTAINER_PRESTASHOP_ENABLE_SSL", "label": "PrestaShop enable SSL", "type": "select", "select": [{ "text": "No", "value": "N" }, { "text": "Yes", "value": "Y" }], "value": "N", "default": "N" },
+                { "name": "PORTAINER_PRESTASHOP_ENABLE_SSL", "label": "PrestaShop enable SSL", "type": "select", "select": [{ "text": "No", "value": "0" }, { "text": "Yes", "value": "1" }], "value": "0", "default": "0" },
                 { "name": "PORTAINER_PRESTASHOP_ADMIN_MAIL", "label": "PrestaShop admin mail", "value": "portainer@default.local", "default": "portainer@default.local" },
                 { "name": "PORTAINER_PRESTASHOP_ADMIN_PASSWORD", "label": "PrestaShop admin password", "value": "admin", "default": "admin" }
             ]
