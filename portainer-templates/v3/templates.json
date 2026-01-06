@@ -69,7 +69,7 @@
                 { "name": "PORTAINER_DB_PREFIX", "label": "Database prefix", "value": "ps_", "default": "ps_" },
                 { "name": "PORTAINER_PRESTASHOP_DEV_MODE", "label": "PrestaShop DEV mode", "type": "select", "select": [{ "text": "Yes", "value": "1" }, { "text": "No", "value": "0" }], "value": "1", "default": "1" },
                 { "name": "PORTAINER_PRESTASHOP_DEMO_MODE", "label": "PrestaShop demo mode", "type": "select", "select": [{ "text": "No", "value": "0" }, { "text": "Yes", "value": "1" }], "value": "0", "default": "0" },
-                { "name": "PORTAINER_PRESTASHOP_INSTALL_AUTO", "label": "Auto install PrestaShop", "type": "select", "select": [{ "text": "Yes", "value": "1" }, { "text": "No", "value": "0" }], "value": "1", "default": "1" },
+                { "name": "PORTAINER_PRESTASHOP_INSTALL_AUTO", "label": "Auto install PrestaShop", "type": "select", "select": [{ "text": "Yes", "value": "Y" }, { "text": "No", "value": "N" }], "value": "Y", "default": "Y" },
                 { "name": "PORTAINER_PRESTASHOP_DOMAIN", "label": "PrestaShop domain", "value": "localhost:8082", "default": "localhost:8082" },
                 { "name": "PORTAINER_PRESTASHOP_LANGUAGE", "label": "PrestaShop default language", "value": "en", "default": "en" },
                 { "name": "PORTAINER_PRESTASHOP_ADMIN_FOLDER_NAME", "label": "PrestaShop admin folder name", "value": "Xadmin", "default": "Xadmin" },
