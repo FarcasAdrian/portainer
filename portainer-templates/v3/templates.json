@@ -77,6 +77,22 @@
                 { "name": "PORTAINER_PRESTASHOP_ADMIN_MAIL", "label": "PrestaShop admin mail", "value": "portainer@default.local", "default": "portainer@default.local" },
                 { "name": "PORTAINER_PRESTASHOP_ADMIN_PASSWORD", "label": "PrestaShop admin password", "value": "admin", "default": "admin" }
             ]
+        },
+        {
+            "id": 4,
+            "type": 3,
+            "title": "Jellyfin",
+            "description": "Default media streaming system.",
+            "categories": ["Media", "Entertainment", "Streaming"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/jellyfin/logo.png",
+            "repository": {
+                "url": "https://github.com/FarcasAdrian/portainer",
+                "stackfile": "docker-environments/jellyfin/docker-compose.yml"
+            },
+            "env": [
+                { "name": "PORTAINER_JELLYFIN_PORT", "label": "Jellyfin port", "value": "8096", "default": "8096" }
+            ]
         }
     ]
 }

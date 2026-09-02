@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    ports:
+      - ${PORTAINER_JELLYFIN_PORT}:8096
+    volumes:
+      - ./config:/config
+      - ./media:/media
