@@ -9,4 +9,5 @@ services:
       - ${PORTAINER_JELLYFIN_PORT}:8096
     volumes:
       - ./config:/config
-      - ./media:/media
+      - /home/adrianf/Movies & Series/TV Shows/:/data/TV Shows
+      - /home/adrianf/Movies & Series/Movies/:/data/Movies
