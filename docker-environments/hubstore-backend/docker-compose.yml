@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  postgresql:
+    image: postgres:18-bookworm
+    container_name: postgresql
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${PORTAINER_DB_PASSWORD}
+      - POSTGRES_DB=${PORTAINER_DB_DATABASE}
+      - POSTGRES_USER=${PORTAINER_DB_USERNAME}
+    ports:
+      - ${PORTAINER_DB_PORT}:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  nodejs:
+    image: node:26-bookworm-slim
+    container_name: nodejs
+    restart: unless-stopped
+    ports:
+      - ${PORTAINER_NODEJS_PORT}:${PORTAINER_NODEJS_PORT}
+    depends_on:
+      - postgresql
+    volumes:
+      - ./app:/app
+    working_dir: /app
+
+volumes:
+  db_data:
