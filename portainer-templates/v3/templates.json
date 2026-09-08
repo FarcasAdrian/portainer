@@ -93,6 +93,26 @@
             "env": [
                 { "name": "PORTAINER_JELLYFIN_PORT", "label": "Jellyfin port", "value": "8096", "default": "8096" }
             ]
+        },
+        {
+            "id": 5,
+            "type": 3,
+            "title": "HubStore Backend",
+            "description": "Default server for HubStore backend.",
+            "categories": ["Web Development", "Backend Web"],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/FarcasAdrian/portainer/main/docker-environments/hubstore-backend/logo.png",
+            "repository": {
+                "url": "https://github.com/FarcasAdrian/portainer",
+                "stackfile": "docker-environments/hubstore-backend/docker-compose.yml"
+            },
+            "env": [
+                { "name": "PORTAINER_NODEJS_PORT", "label": "NodeJs port", "value": "3000", "default": "3000" },
+                { "name": "PORTAINER_DB_PASSWORD", "label": "Database password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_DATABASE", "label": "Database name", "value": "hubstore", "default": "hubstore" },
+                { "name": "PORTAINER_DB_USERNAME", "label": "Database username", "value": "root", "default": "root" },
+                { "name": "PORTAINER_DB_PORT", "label": "Database port", "value": "5432", "default": "5432" }
+            ]
         }
     ]
 }
