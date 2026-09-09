@@ -14,7 +14,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql
   nodejs:
-    image: node:26-bookworm-slim
+    build: .
     container_name: nodejs
     restart: unless-stopped
     ports:
@@ -23,7 +23,6 @@ services:
       - postgresql
     volumes:
       - ./app:/app
-    working_dir: /app
 
 volumes:
   db_data:
