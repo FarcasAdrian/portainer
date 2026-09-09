@@ -12,7 +12,7 @@ services:
     ports:
       - ${PORTAINER_DB_PORT}:5432
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql
   nodejs:
     image: node:26-bookworm-slim
     container_name: nodejs
