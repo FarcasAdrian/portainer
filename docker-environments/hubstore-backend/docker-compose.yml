@@ -1,18 +1,30 @@
 version: "3.9"
 
 services:
-  postgresql:
+  postgresql_core:
     image: postgres:18-bookworm
-    container_name: postgresql
+    container_name: postgresql_core
     restart: always
     environment:
-      - POSTGRES_PASSWORD=${PORTAINER_DB_PASSWORD}
-      - POSTGRES_DB=${PORTAINER_DB_DATABASE}
-      - POSTGRES_USER=${PORTAINER_DB_USERNAME}
+      - POSTGRES_PASSWORD=${PORTAINER_CORE_DB_PASSWORD}
+      - POSTGRES_DB=${PORTAINER_CORE_DB_DATABASE}
+      - POSTGRES_USER=${PORTAINER_CORE_DB_USERNAME}
     ports:
-      - ${PORTAINER_DB_PORT}:5432
+      - ${PORTAINER_CORE_DB_PORT}:5432
     volumes:
-      - db_data:/var/lib/postgresql
+      - postgresql_core:/var/lib/postgresql
+  postgresql_operations:
+    image: postgres:18-bookworm
+    container_name: postgresql_operations
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${PORTAINER_OPERATIONS_DB_PASSWORD}
+      - POSTGRES_DB=${PORTAINER_OPERATIONS_DB_DATABASE}
+      - POSTGRES_USER=${PORTAINER_OPERATIONS_DB_USERNAME}
+    ports:
+      - ${PORTAINER_OPERATIONS_DB_PORT}:5432
+    volumes:
+      - postgres_operations:/var/lib/postgresql
   nodejs:
     build: .
     container_name: nodejs
@@ -20,9 +32,11 @@ services:
     ports:
       - ${PORTAINER_NODEJS_PORT}:${PORTAINER_NODEJS_PORT}
     depends_on:
-      - postgresql
+      - postgresql_core
+      - postgresql_operations
     volumes:
       - ./app:/app
 
 volumes:
-  db_data:
+  postgresql_core:
+  postgresql_operations:

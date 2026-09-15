@@ -108,10 +108,14 @@
             },
             "env": [
                 { "name": "PORTAINER_NODEJS_PORT", "label": "NodeJs port", "value": "3000", "default": "3000" },
-                { "name": "PORTAINER_DB_PASSWORD", "label": "Database password", "value": "root", "default": "root" },
-                { "name": "PORTAINER_DB_DATABASE", "label": "Database name", "value": "hubstore", "default": "hubstore" },
-                { "name": "PORTAINER_DB_USERNAME", "label": "Database username", "value": "root", "default": "root" },
-                { "name": "PORTAINER_DB_PORT", "label": "Database port", "value": "5432", "default": "5432" }
+                { "name": "PORTAINER_CORE_DB_PASSWORD", "label": "Core database password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_CORE_DB_DATABASE", "label": "Core database name", "value": "hubstore_core", "default": "hubstore_core" },
+                { "name": "PORTAINER_CORE_DB_USERNAME", "label": "Core database username", "value": "root", "default": "root" },
+                { "name": "PORTAINER_CORE_DB_PORT", "label": "Core database port", "value": "5432", "default": "5432" },
+                { "name": "PORTAINER_OPERATIONS_DB_PASSWORD", "label": "Operations database password", "value": "root", "default": "root" },
+                { "name": "PORTAINER_OPERATIONS_DB_DATABASE", "label": "Operations database name", "value": "hubstore_operations", "default": "hubstore_operations" },
+                { "name": "PORTAINER_OPERATIONS_DB_USERNAME", "label": "Operations database username", "value": "root", "default": "root" },
+                { "name": "PORTAINER_OPERATIONS_DB_PORT", "label": "Operations database port", "value": "5432", "default": "5432" }
             ]
         }
     ]
