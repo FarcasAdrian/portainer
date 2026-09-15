@@ -24,7 +24,7 @@ services:
     ports:
       - ${PORTAINER_OPERATIONS_DB_PORT}:5432
     volumes:
-      - postgres_operations:/var/lib/postgresql
+      - postgresql_operations:/var/lib/postgresql
   nodejs:
     build: .
     container_name: nodejs

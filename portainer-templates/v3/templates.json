@@ -115,7 +115,7 @@
                 { "name": "PORTAINER_OPERATIONS_DB_PASSWORD", "label": "Operations database password", "value": "root", "default": "root" },
                 { "name": "PORTAINER_OPERATIONS_DB_DATABASE", "label": "Operations database name", "value": "hubstore_operations", "default": "hubstore_operations" },
                 { "name": "PORTAINER_OPERATIONS_DB_USERNAME", "label": "Operations database username", "value": "root", "default": "root" },
-                { "name": "PORTAINER_OPERATIONS_DB_PORT", "label": "Operations database port", "value": "5432", "default": "5432" }
+                { "name": "PORTAINER_OPERATIONS_DB_PORT", "label": "Operations database port", "value": "5433", "default": "5433" }
             ]
         }
     ]
